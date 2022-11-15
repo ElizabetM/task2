@@ -21,10 +21,10 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
-    - name: |
+      run: |
         cd Project2
-        Build
+        dotnet restore
+    - name: Build
       run: |
         cd Project2
         dotnet build --no-restore
